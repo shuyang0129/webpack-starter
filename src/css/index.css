@@ -1,0 +1,32 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 相当于 1fr 1fr 1fr */
+  grid-template-rows: repeat(3, 1fr); /* fr单位可以将容器分为几等份 */
+  grid-gap: 1%; /* grid-column-gap 和 grid-row-gap的简写 */
+  grid-auto-flow: row;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.bg-filter {
+  filter: blur(5px);
+}
