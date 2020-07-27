@@ -24,31 +24,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        exclude: [/node_modules/],
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
-            loader: 'px2rem-loader',
-            // options here
-            options: {
-              remUni: 75,
-              remPrecision: 8,
-            },
-          },
-          // 把 postcss-loader 放在 css-loader 前面 (第一步)
-          {
-            loader: 'postcss-loader',
-            options: {
-              // 傳遞 plugins 選項並載入 autoprefixer 做使用 (第二步)
-              plugins: [autoprefixer()],
-            },
-          },
-        ],
-      },
-      {
-        test: /\.s[ac]ss$/i,
+        test: /\.(s[ac]ss|css)$/i,
         // 把 sass-loader 放在首要處理 (第一步)
         use: [
           MiniCssExtractPlugin.loader,
