@@ -54,6 +54,19 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.(png|jpg|gif|jpe?g|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'img/[name].[ext]',
+              publicPath: './img',
+              emitFile: false
+            }  
+          }
+        ]
+      }
     ],
   },
 }
